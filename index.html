@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Match</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Armada Match</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="total_page">
+<div class="row">
+    <div class="col-md-3" id="stats_side_bar">
+        <p>STATS:</p>
+        <p>Times played: </p><!--running count of games played-->
+        <p>Number of tries: </p><!--counts how many correct/incorrect clicks-->
+        <p>Accuracy: </p><!--comparison of right/wrong answers-->
+        <p>Game info Area</p>
+        <p>reset-game</p><!--reset button-->
+    </div>
+
+    <div class="row">
+     <div class="col-md-8">
+         <div class="game_area">
+             <div class="row">
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Assault.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Assault.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/CR90a.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/CR90a.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Gladiator.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Gladiator.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/isd.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/isd.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Mc30c.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Mc30c.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Mc80.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Mc80.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/nebulon.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/nebulon.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Raider.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Raider.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Victory.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-sm-2">
+                     <div class="card_container">
+                         <div class="front">
+                             <img src="images/Victory.png">
+                         </div>
+                         <div class="back">
+                             <img src="images/rebel.png">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+</div>
+</div>
+</div>
+</body>
+</html>

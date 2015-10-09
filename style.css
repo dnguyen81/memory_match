@@ -1,0 +1,64 @@
+body {
+    background: url("images/bgspace.jpg");
+}
+#stats_side_bar{
+    width: 10%;
+    height: 125vh;
+    background-color: red;
+
+}
+.col-sm-2 {
+    width: 12vw;
+
+}
+.game_area {
+    width: 80vw;
+    height: 125vh;
+    z-index: 1;
+}
+.card_container {
+    width: 12vw;
+    height: 40vh;
+    position: relative;
+    padding: 5px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+.card_container{
+    perspective: 1000px;
+}
+.front img {
+    position: relative;
+    height: 88%;
+    width: 88%;
+    margin: 5px;
+    padding: 5px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.back img {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    padding: 5px;
+    margin: 5px;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.card_container img {
+    position: absolute;
+    left:0;
+}
+.card_container:hover {
+    transform: rotateY(180deg);
+}
+p {
+    color: white;
+}
+h3 {
+    color: white;
+}
+ul#skills_list li {
+    color: white;
+}
