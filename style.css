@@ -1,28 +1,29 @@
+div.total-area {
+    background-color:grey;
 
+}
 #stats_side_bar{
     width: 10%;
-    height: 125vh;
+    height: 140vh;
     background-color: red;
 
 }
 .col-sm-2 {
-    width: 12vw;
+    width: 13vw;
 
 }
 #game-area {
     width: 100vw;
-    height: 125vh;
+    height: 140vh;
     z-index: 1;
 }
 
 .card {
-    width: 12vw;
-    height: 40vh;
+    width: 15vw;
+    height: 45vh;
     position: relative;
-    padding: 10px;
-    margin: 0 auto;
-    transform-style: preserve-3d;
-    transition: all 1.0s linear;
+    padding: 5px;
+    margin: 5px auto;
 }
 .card{
     perspective: 1000px;
@@ -33,6 +34,7 @@
     width: 88%;
     margin: 10px;
     padding: 10px;
+    backface-visibility: hidden;
 }
 .back img {
     position: relative;
@@ -40,6 +42,7 @@
     width: 90%;
     padding: 10px;
     margin: 10px;
+    backface-visibility: hidden;
 }
 .card img {
     position: absolute;
@@ -47,11 +50,11 @@
 }
 
 p {
-    color: white;
+    color: yellow;
 }
 h3 {
-    color: white;
+    color: yellow;
 }
 ul#skills_list li {
-    color: white;
+    color: yellow;
 }
