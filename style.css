@@ -1,11 +1,13 @@
 div.total-area {
-    background-color:grey;
+    background: url(images/bgspace.jpg) no-repeat;
+    background-size: cover;
 
 }
-#stats_side_bar{
+#stats_container {
     width: 10%;
     height: 140vh;
     background-color: red;
+    opacity: 0.75;
 
 }
 .col-sm-2 {
@@ -19,8 +21,8 @@ div.total-area {
 }
 
 .card {
-    width: 15vw;
-    height: 45vh;
+    width: 10vw;
+    height: 30vh;
     position: relative;
     padding: 5px;
     margin: 5px auto;
@@ -34,7 +36,6 @@ div.total-area {
     width: 88%;
     margin: 10px;
     padding: 10px;
-    backface-visibility: hidden;
 }
 .back img {
     position: relative;
