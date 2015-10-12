@@ -31,19 +31,19 @@ div.total-area {
     perspective: 1000px;
 }
 .front img {
-    position: relative;
+    position: absolute;
     height: 88%;
     width: 88%;
     margin: 10px;
     padding: 10px;
+    border-radius: 50%;
 }
 .back img {
-    position: relative;
+    position: absolute;
     height: 90%;
     width: 90%;
     padding: 10px;
     margin: 10px;
-    backface-visibility: hidden;
 }
 .card img {
     position: absolute;
