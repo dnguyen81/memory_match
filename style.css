@@ -1,3 +1,18 @@
+.navbar {
+    font-family: 'Oswald', sans-serif;
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 36px;
+}
+.navbar-inverse a {
+    color: #ccc;
+}
+.navbar-nav a {
+    font-weight: 600;
+    font-size: 24px;
+    color: #cccccc;
+}
 div.total-area {
     background: url(images/bgspace.jpg) no-repeat;
     background-size: cover;
@@ -10,6 +25,19 @@ div.total-area {
     opacity: 0.75;
 
 }
+p.label {
+    font-size: 20px;
+    margin: 20px;
+}
+p.value {
+    font-size: 30px;
+    margin: 20px;
+}
+.reset {
+    font-size: 30px;
+    margin-top: 100px;
+}
+
 .col-sm-2 {
     width: 13vw;
 
@@ -32,16 +60,16 @@ div.total-area {
 }
 .front img {
     position: absolute;
-    height: 88%;
-    width: 88%;
+    height: 100%;
+    width: 100%;
     margin: 10px;
     padding: 10px;
     border-radius: 50%;
 }
 .back img {
     position: absolute;
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     padding: 10px;
     margin: 10px;
 }
@@ -52,6 +80,7 @@ div.total-area {
 
 p {
     color: yellow;
+    font-size: 20px;
 }
 h3 {
     color: yellow;
