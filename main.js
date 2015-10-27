@@ -13,7 +13,7 @@ var games_played = 0;
 
 function card_clicked(card_container_element) {
     var back_element = $(card_container_element).find('.back');
-    $(back_element).hide();
+    $(back_element).hide('slow');
 
     var front_element = $(card_container_element).find('.front img');
 
@@ -27,7 +27,7 @@ function card_clicked(card_container_element) {
         console.log('this is the 2nd card clicked');
         if (first_card_clicked == second_card_clicked) {
             console.log('they match');
-
+            $("src").remove("")
             first_card_clicked = null;
             //counter increase here
             var x = ++match_counter;
@@ -39,7 +39,8 @@ function card_clicked(card_container_element) {
 
             console.log('they do not match');
             setTimeout(function () {
-                $('.back').show();
+                $('.back').show('fast');
+                //$('.back, second_card_clicked').show();
                 first_card_clicked = null;
                 second_card_clicked = null;
                 var attempt = ++attempts;
@@ -53,9 +54,12 @@ function card_clicked(card_container_element) {
     }
 }
 function display_stats() {
-    var acc = (18 / attempts) * 100 + "%";
-    $('.accuracy .value').html(acc);
+    var acc = (18 / attempts) * 100;
+    var accfixed = acc.toFixed(2) + "%";
     console.log(acc);
+    console.log(accfixed);
+    $('.accuracy .value').html(accfixed);
+
 }
 function reset() {
 
