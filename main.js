@@ -1,6 +1,10 @@
 /**
  * Created by dndeli on 10/14/2015.
  */
+
+
+
+
 var first_card_clicked = null;
 var second_card_clicked = null;
 var total_possible_matches = 2;
