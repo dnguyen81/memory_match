@@ -88,3 +88,6 @@ h3 {
 ul#skills_list li {
     color: yellow;
 }
+.card #clicked {
+    pointer-events: none;
+}

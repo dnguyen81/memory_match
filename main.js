@@ -10,12 +10,50 @@ var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
 
+//card creation
+
+/*var front = [
+
+    "images/Assault.png",
+    "images/CR90a.png",
+    "images/Gladiator.png",
+    "images/isd.png",
+    "images/Mc30c.png",
+    "images/Mc80.png",
+    "images/nebulon.png",
+    "images/Raider.png",
+    "images/Victory.png"
+
+];
+var back = [
+    "images/rebel.png"
+];
+var selected = [];
+for (var i = 0; i < 9; i++){
+    var randomInd = floor(random(front.length));
+    var face = front[randomInd];
+//push is repeated to give two copies of the face. Splice to remove the face from being placed again.
+    selected.push(face);
+    selected.push(face);
+    front.splice(randomInd, 1);
+}
+*/
+
+/*function newGame(){
+    matches = 0;
+    var output = '';
+    front.front_shuffle();
+    for(var i = 0; i < front.length; i++){
+        output += '<div id="tile_'+i+'" onclick = "frontFlipTile(this, /''+front[i]+'\')"></div>';
+    }
+    document.getElementById('game-area').innerHTML = output;
+}*/
 
 function card_clicked(card_container_element) {
-    var back_element = $(card_container_element).find('.back');
+    var back_element = $(card_container_element).find('.back').addClass('clicked');
     $(back_element).hide('slow');
 
-    var front_element = $(card_container_element).find('.front img');
+    var front_element = $(card_container_element).find('.front img').addClass('clicked');
 
     var second_card_clicked = $(front_element).attr('src');
     if (first_card_clicked == null) {
@@ -27,7 +65,8 @@ function card_clicked(card_container_element) {
         console.log('this is the 2nd card clicked');
         if (first_card_clicked == second_card_clicked) {
             console.log('they match');
-            $("src").remove("")
+            $("src").remove("");
+            front_element.removeClass('back');
             first_card_clicked = null;
             //counter increase here
             var x = ++match_counter;
@@ -39,6 +78,8 @@ function card_clicked(card_container_element) {
 
             console.log('they do not match');
             setTimeout(function () {
+                back_element.addClass('clicked');
+                front_element.removeClass('clicked');
                 $('.back').show('fast');
                 //$('.back, second_card_clicked').show();
                 first_card_clicked = null;
@@ -53,6 +94,7 @@ function card_clicked(card_container_element) {
 
     }
 }
+
 function display_stats() {
     var acc = (18 / attempts) * 100;
     var accfixed = acc.toFixed(2) + "%";
