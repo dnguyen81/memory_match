@@ -19,7 +19,7 @@ div.total-area {
 
 }
 #stats_container {
-    width: 10%;
+    width: 12%;
     height: 140vh;
     background-color: red;
     opacity: 0.75;
@@ -88,6 +88,9 @@ h3 {
 ul#skills_list li {
     color: yellow;
 }
-.card #clicked {
+.clicked {
     pointer-events: none;
+}
+.flipback {
+    display: none;
 }

@@ -50,36 +50,36 @@ for (var i = 0; i < 9; i++){
 }*/
 
 function card_clicked(card_container_element) {
-    var back_element = $(card_container_element).find('.back').addClass('clicked');
+    var back_element = $(card_container_element).find('.back');
     $(back_element).hide('slow');
 
-    var front_element = $(card_container_element).find('.front img').addClass('clicked');
-
+    var front_element = $(card_container_element).find('.front img');
     var second_card_clicked = $(front_element).attr('src');
+    $(card_container_element).addClass('clicked');
     if (first_card_clicked == null) {
         console.log('this is the 1st card clicked');
+        $(card_container_element).find('.back').addClass('flipBack');
         first_card_clicked = second_card_clicked;
         var attempt = ++attempts;
         $('.attempts .value').html(attempt);
+        return second_card_clicked;
     } else {
         console.log('this is the 2nd card clicked');
         if (first_card_clicked == second_card_clicked) {
             console.log('they match');
-            $("src").remove("");
-            front_element.removeClass('back');
+            $(back_element).remove();
             first_card_clicked = null;
             //counter increase here
             var x = ++match_counter;
             console.log("matches: " + x);
             var attempt = ++attempts;
             $('.attempts .value').html(attempt);
-
+            $(back_element).addClass('flipBack');
         } else {
-
+            $('.card').removeClass('clicked');
+            $(card_container_element).removeClass('flipBack');
             console.log('they do not match');
             setTimeout(function () {
-                back_element.addClass('clicked');
-                front_element.removeClass('clicked');
                 $('.back').show('fast');
                 //$('.back, second_card_clicked').show();
                 first_card_clicked = null;
