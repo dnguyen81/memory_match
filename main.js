@@ -3,13 +3,14 @@
  */
 var first_card_clicked = null;
 var second_card_clicked = null;
+var card_container_one = null;
+var card_container_two = null;
 var total_possible_matches = 9;
 var match_counter = 0;
 var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
-var new_pics_array = [];
 //card creation
 var new_card_array =[];
 var random_card_array=[];
@@ -26,9 +27,7 @@ var front = [
     "images/Victory.png"
 
 ];
-var back = [
-    "images/rebel.png"
-];
+
 
 function randomize_array (){
   random_card_array.sort(function() {return 0.5 - Math.random()});
@@ -77,18 +76,20 @@ function card_clicked(card_container_element) {
     var attempt;
     $(card_container_element).addClass('clicked');
     if (first_card_clicked == null) {
+        card_container_one = card_container_element;
         console.log('this is the 1st card clicked');
-        $(card_container_element).find('.back').addClass('flipBack');
+        $(card_container_one).find('.back').addClass('flipBack');
         first_card_clicked = second_card_clicked;
         attempt = ++attempts;
         $('.attempts .value').html(attempt);
       //  return second_card_clicked;
     } else {
         console.log('this is the 2nd card clicked');
+        card_container_two = card_container_element;
         if (first_card_clicked == second_card_clicked) {
             console.log('they match');
-
-            $(back_element).remove();
+            $(card_container_one).find('.back').remove();
+            $(card_container_two).find('.back').remove();
             first_card_clicked = null;
             //counter increase here
             var x = ++match_counter;
@@ -97,17 +98,19 @@ function card_clicked(card_container_element) {
             $('.attempts .value').html(attempt);
            // $(back_element).addClass('flipBack');
         } else {
-            $('.card').removeClass('clicked', 'flipBack');
+
       //      $('.card').removeClass('flipBack');
             console.log('they do not match');
             setTimeout(function () {
+                $(card_container_one).removeClass('clicked', 'flipBack');
+                $(card_container_two).removeClass('clicked', 'flipBack');
                 $('.back').show('fast');
                 //$('.back, second_card_clicked').show();
                 first_card_clicked = null;
                 second_card_clicked = null;
                 attempt = ++attempts;
                 $('.attempts .value').html(attempt);
-            }, 2000);
+            }, 1000);
         }
     }
     if (match_counter == total_possible_matches) {
