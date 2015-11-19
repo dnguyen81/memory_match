@@ -121,8 +121,11 @@ function display_stats() {
     var accfixed = acc.toFixed(2) + "%";
     console.log(acc);
     console.log(accfixed);
+    if(attempts ==0){
+        $('.accuracy .value').html('0%');
+    }else {
     $('.accuracy .value').html(accfixed);
-
+    }
 }
 function reset() {
 
