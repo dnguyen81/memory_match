@@ -27,7 +27,22 @@ var front = [
     "images/Victory.png"
 
 ];
+var back = [
+    "images/rebel2.png",
+    "images/imperial2.png",
+    "images/mando.png",
+    "images/Sith.png",
+    "images/jedi.png"
+];
+var random_back = [];
 
+function randomize_back () {
+
+    back.sort(function(){
+       return 0.5 - Math.random()
+    });
+    random_back = back[0];
+}
 
 function randomize_array() {
     random_card_array.sort(function () {
@@ -49,13 +64,13 @@ function create_card_container() {
         console.log("this is the random array ", random_card_array);
         randomize_array();
     }
-
+    randomize_back();
     for (var i = 0; i < random_card_array.length; i++) {
         var card_div = $('<div>').addClass('card').attr('onclick', 'card_clicked(this)');
         var front_div = $('<div>').addClass('front');
         var back_div = $('<div>').addClass('back');
         var img_front = $('<img>').attr('src', random_card_array[i]);
-        var img_back = $('<img>').addClass('back').attr('src', 'images/rebel.png');
+        var img_back = $('<img>').addClass('back').attr('src', random_back);
         var colsm = $('<div>').addClass('col-sm-2');
         front_div.append(img_front);
         back_div.append(img_back);
@@ -113,7 +128,7 @@ function card_clicked(card_container_element) {
                 second_card_clicked = null;
                 attempt = ++attempts;
                 $('.attempts .value').html(attempt);
-            }, 500);
+            }, 700);
         }
  //   }
    }
