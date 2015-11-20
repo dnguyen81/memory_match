@@ -82,16 +82,23 @@ p.value {
 p {
     color: yellow;
     font-size: 20px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 h3 {
     color: yellow;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 ul#skills_list li {
     color: yellow;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .clicked {
     pointer-events: none;
 }
 .flipback {
     display: none !important;
+}
+.about {
+    width: 100vw;
+    height: 100vh;
 }
