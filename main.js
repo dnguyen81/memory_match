@@ -23,19 +23,28 @@ var new_card_array = [];
 var random_card_array = [];
 
 //============original image array==============//
-var front = [
-
-    "images/Assault.png",
-    "images/CR90a.png",
-    "images/Gladiator.png",
-    "images/isd.png",
-    "images/Mc30c.png",
-    "images/Mc80.png",
-    "images/nebulon.png",
-    "images/Raider.png",
-    "images/Victory.png"
-
-];
+var front = [];
+//var front = [
+//
+//    "images/Assault.png",
+//    "images/CR90a.png",
+//    "images/Gladiator.png",
+//    "images/isd.png",
+//    "images/Mc30c.png",
+//    "images/Mc80.png",
+//    "images/nebulon.png",
+//    "images/Raider.png",
+//    "images/Victory.png",
+//    'images/awing.png',
+//    'images/bobaship.png',
+//    'images/BWing.png',
+//    'images/tie.png',
+//    'images/falcon.png',
+//    'images/gauntlet.png',
+//    'images/JediFighter.png',
+//    'images/tieint.png',
+//    'images/xw1.png'
+//];
 //=======multiple back cards that randomize during game creation==========//
 var back = [
     "images/rebel2.png",
@@ -60,6 +69,52 @@ function randomize_array() {
     });
     console.log("This is the randomized array", random_card_array);
 }
+function card_set1(){
+    front = [
+        "images/Assault.png",
+        "images/CR90a.png",
+        "images/Gladiator.png",
+        "images/isd.png",
+        "images/Mc30c.png",
+        "images/Mc80.png",
+        "images/nebulon.png",
+        "images/Raider.png",
+        "images/Victory.png"
+        //'images/awing.png',
+        //'images/bobaship.png',
+        //'images/BWing.png',
+        //'images/tie.png',
+        //'images/falcon.png',
+        //'images/gauntlet.png',
+        //'images/JediFighter.png',
+        //'images/tieint.png',
+        //'images/xw1.png'
+    ];
+    //front.splice(9,9);
+}
+function card_set2(){
+    front = [
+        //"images/Assault.png",
+        //"images/CR90a.png",
+        //"images/Gladiator.png",
+        //"images/isd.png",
+        //"images/Mc30c.png",
+        //"images/Mc80.png",
+        //"images/nebulon.png",
+        //"images/Raider.png",
+        //"images/Victory.png",
+        'images/awing.png',
+        'images/bobaship.png',
+        'images/BWing.png',
+        'images/tie.png',
+        'images/falcon.png',
+        'images/gauntlet.png',
+        'images/JediFighter.png',
+        'images/tieint.png',
+        'images/xw1.png'
+    ];
+    //front.splice(0,9);
+}
 //==========Easy board creation, 6 cards to match ============//
 function easy(){
     total_possible_matches = 3;
@@ -72,6 +127,7 @@ function easy(){
     $('.col-sm-2').remove();
     display_stats();
     attempts = 0;
+
     front.splice(0,6);
         new_card_array = front;
         random_card_array = front.concat(new_card_array);
@@ -238,17 +294,7 @@ function display_stats() {
     } else {
         $('.accuracy .value').html(accfixed);
     }
-    front = [
-        "images/Assault.png",
-        "images/CR90a.png",
-        "images/Gladiator.png",
-        "images/isd.png",
-        "images/Mc30c.png",
-        "images/Mc80.png",
-        "images/nebulon.png",
-        "images/Raider.png",
-        "images/Victory.png"
-    ];
+
 
 }
 function reset_stats(){
@@ -264,7 +310,26 @@ function reset_button() {
     $('.back').show();
     $('.col-sm-2').remove();
 
-    //create_card_container();
+    //front = [
+    //    "images/Assault.png",
+    //    "images/CR90a.png",
+    //    "images/Gladiator.png",
+    //    "images/isd.png",
+    //    "images/Mc30c.png",
+    //    "images/Mc80.png",
+    //    "images/nebulon.png",
+    //    "images/Raider.png",
+    //    "images/Victory.png",
+    //    'images/awing.png',
+    //    'images/bobaship.png',
+    //    'images/BWing.png',
+    //    'images/tie.png',
+    //    'images/falcon.png',
+    //    'images/gauntlet.png',
+    //    'images/JediFighter.png',
+    //    'images/tieint.png',
+    //    'images/xw1.png'
+    //];
 }
 
 $(document).ready(function () {
