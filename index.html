@@ -43,6 +43,19 @@
             <h3>Game info Area</h3>
         <button type="button" class="reset" onclick="reset()">Reset-Game</button>
         <button type="button" class="start" onclick="create_card_container()">Start</button>
+        <button id='theme_music'>Stop Music</button>
+        <audio loop id="sw_theme">
+            <source src="sounds/starwars.wav">
+        </audio>
+        <audio id="laser">
+            <source src="sounds/XWing-Laser.wav">
+        </audio>
+        <audio id="start">
+            <source src = "sounds/goodluck.wav">
+        </audio>
+        <audio id="game_over">
+            <source src = "sounds/greatshotkid.wav">
+        </audio>
     </div>
     <div id="game-area">
 
@@ -59,9 +72,9 @@
 
         </div>
         </div>
+<!--    </div>
     </div>
-    </div>
-
+-->
 
 </body>
 </html>

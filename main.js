@@ -11,6 +11,9 @@ var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
+//=============theme music integration==========//
+var theme_music = true;
+
 //card creation
 var new_card_array = [];
 var random_card_array = [];
@@ -54,7 +57,7 @@ function create_card_container() {
     var gamesplayed = ++games_played;
     $('.games-played .value').html(gamesplayed);
     console.log('create card container clicked');
-
+    start.play();
     $('.col-sm-2').remove();
     display_stats();
     for (var i = 0; i < front.length; i++) {
@@ -108,6 +111,7 @@ function card_clicked(card_container_element) {
             console.log('they match');
             $(card_container_one).find('.back').remove();
             $(card_container_two).find('.back').remove();
+            laser.play();
             first_card_clicked = null;
             //counter increase here
             var x = ++match_counter;
@@ -133,6 +137,7 @@ function card_clicked(card_container_element) {
  //   }
    }
     if (match_counter == total_possible_matches) {
+        game_over.play();
         alert("Board cleared. Congratulations!!");
 
     }
@@ -162,6 +167,21 @@ function reset() {
 }
 
 $(document).ready(function () {
+//========= Theme Music ==============//
+
+    sw_theme.play();
+
+    $("#theme_music").on('click', function(){
+        if (theme_music === true) {
+            theme_music = false;
+            sw_theme.pause();
+            $("#theme_music").html("Play Music")
+        }else {
+            sw_theme.play();
+            $("#theme_music").html("Stop Music");
+            theme_music = true;
+        }
+    });
 
 
 });
