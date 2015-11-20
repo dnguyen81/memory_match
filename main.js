@@ -130,8 +130,9 @@ function medium(){
     }
 }
 
-
+//=================Hard difficulty board creation, 9 matches, 18 cards================//
 function hard() {
+
     total_possible_matches = 9;
     reset_stats();
 
