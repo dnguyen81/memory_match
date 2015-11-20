@@ -41,224 +41,56 @@
             <p class="value"></p>
         </div>
             <h3>Game info Area</h3>
-        <button type="button" class="reset" onclick="reset()">Reset-Game</button>
+        <div class = "button_design">
+            <button type="button" class="reset" onclick="reset_button()">Reset-Game</button>
+        </div>
 
+        <div class="button_design">
+            <button type="button" class="start" onclick="easy()">Easy</button>
+        </div>
+
+        <div class = "button_design">
+            <button type="button" class="start" onclick="medium()">Medium</button>
+        </div>
+        <div class = "button_design">
+            <button type="button" class="start" onclick="hard()">Hard</button>
+        </div>
+
+        <div class = "button_design">
+        <button id='theme_music'>Stop Music</button>
+        </div>
+
+        <audio loop id="sw_theme">
+            <source src="sounds/starwars.wav">
+        </audio>
+        <audio id="laser">
+            <source src="sounds/XWing-Laser.wav">
+        </audio>
+        <audio id="game_start">
+            <source src = "sounds/goodluck.wav">
+        </audio>
+        <audio id="game_over">
+            <source src = "sounds/greatshotkid.wav">
+        </audio>
     </div>
     <div id="game-area">
 
         <div class="col-md-10">
 
-             <div class="row">
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Assault.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
+             <div class="row row1">
 
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Assault.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
+  <!--           <div class="row row2">
 
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/CR90a.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/CR90a.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Gladiator.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Gladiator.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
+             <div class="row row3"> -->
              </div>
-
-             <div class="row">
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/isd.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/isd.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Mc30c.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Mc30c.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Mc80.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Mc80.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="row">
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/nebulon.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/nebulon.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Raider.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Raider.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Victory.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-sm-2">
-                     <div class="card" onclick="card_clicked(this)">
-                         <div class="front">
-                             <img src="images/Victory.png">
-                         </div>
-                         <div class="back">
-                             <img src="images/rebel.png">
-                         </div>
-                     </div>
-                 </div>
-             </div>
+         </div>
+         </div>
 
         </div>
         </div>
+<!--    </div>
     </div>
-    </div>
-</div>
+-->
 
 </body>
 </html>
