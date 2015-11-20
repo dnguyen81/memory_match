@@ -228,6 +228,10 @@ function hard() {
 
 }
 function card_clicked(card_container_element) {
+    if (card_container_one != null && card_container_two != null){
+        $('.back').attr('clicked');
+    }else{
+        $('.back').removeAttr('clicked');
     var back_element = $(card_container_element).find('.back');
     $(back_element).hide('slow');
     var front_element = $(card_container_element).find('.front img');
@@ -252,6 +256,8 @@ function card_clicked(card_container_element) {
             $(card_container_two).find('.back').remove();
             laser.play();
             first_card_clicked = null;
+            card_container_one = null;
+            card_container_two = null;
             //counter increase here
             var x = ++match_counter;
             console.log("matches: " + x);
@@ -266,11 +272,14 @@ function card_clicked(card_container_element) {
                 $('.back').show('fast');
                 first_card_clicked = null;
                 second_card_clicked = null;
+                card_container_one = null;
+                card_container_two = null;
                 attempt = ++attempts;
                 $('.attempts .value').html(attempt);
             }, 700);
         }
  //   }
+    }
    }
     if (match_counter == total_possible_matches) {
         game_over.play();
