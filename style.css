@@ -20,24 +20,24 @@ div.total-area {
 }
 #stats_container {
     width: 12%;
-    height: 140vh;
+    height: 150vh;
     background-color: red;
     opacity: 0.75;
 
 }
 p.label {
     font-size: 1.25em;
-    margin: 20px;
+    margin: 1vw;
 }
 p.value {
     font-size: 1.875em;
-    margin: 20px;
+    margin: 1vw;
 }
-.reset {
-    font-size: 1.875em;
-    margin-top: 100px;
+.button_design{
+    font-size: 1.5em;
+    margin-top: 1vw;
+    width: 100%;
 }
-
 .col-sm-2 {
     width: 13vw;
 
