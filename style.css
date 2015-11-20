@@ -102,3 +102,9 @@ ul#skills_list li {
     width: 100vw;
     height: 100vh;
 }
+#theme_music {
+    margin-top: 10px;
+}
+.games-played{
+    font-size: 1.45em;
+}
