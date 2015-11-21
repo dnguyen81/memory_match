@@ -343,7 +343,7 @@ function reset_button() {
 
 $(document).ready(function () {
 //========= Theme Music ==============//
-
+    setHalfVolume();
     sw_theme.play();
 
     $("#theme_music").on('click', function(){
@@ -360,7 +360,10 @@ $(document).ready(function () {
 
 
 });
-
+function setHalfVolume(){
+    var myAudio = document.getElementById("sw_theme");
+    myAudio.volume = 0.25;
+}
 //=====another attempt at difficulty, will come back to this later===========//
 //function difficulty(difficult){
 //    switch (difficult) {
