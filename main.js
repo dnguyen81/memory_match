@@ -376,11 +376,13 @@ var counter = setInterval(timer, 1000);
 function timer(counter){
     count = count-1;
     if(count<0){
+        clearInterval(counter);
         $('#timer').html('Ready to play a game?')
     }else if(count ==0){
         clearInterval(counter);
         $('#timer').html("Time Expired");
         $('.col-sm-2').remove();
+        display_stats();
     }else if(count >=0 && match_counter == total_possible_matches){
 
         $('#timer').html("Congratuations, you cleared the board!");
