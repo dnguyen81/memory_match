@@ -108,3 +108,8 @@ ul#skills_list li {
 .games-played{
     font-size: 1.45em;
 }
+#timer {
+    color: yellow;
+    font-size: 2em;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}

@@ -15,6 +15,7 @@ var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
+var count = null;
 //=============theme music integration==========//
 var theme_music = true;
 
@@ -117,6 +118,7 @@ function card_set2(){
 }
 //==========Easy board creation, 6 cards to match ============//
 function easy(){
+    count = 15;
     total_possible_matches = 3;
     reset_stats();
 
@@ -149,10 +151,12 @@ function easy(){
         colsm.append(card_div);
         $('#game-area').find('.row1').append(colsm);
     }
+    timer();
 }
 
 //===========medium board creation with six matches=======////////////
 function medium(){
+    count = 20;
     total_possible_matches = 6;
         reset_stats();
 
@@ -184,11 +188,12 @@ function medium(){
         colsm.append(card_div);
         $('#game-area').find('.row1').append(colsm);
     }
+    timer();
 }
 
 //=================Hard difficulty board creation, 9 matches, 18 cards================//
 function hard() {
-
+count = 30;
     total_possible_matches = 9;
     reset_stats();
 
@@ -225,7 +230,7 @@ function hard() {
         colsm.append(card_div);
         $('#game-area').find('.row1').append(colsm);
     }
-
+    timer();
 }
 function card_clicked(card_container_element) {
     if (card_container_one != null && card_container_two != null){
@@ -260,6 +265,7 @@ function card_clicked(card_container_element) {
             card_container_two = null;
             //counter increase here
             var x = ++match_counter;
+            count += 3;
             console.log("matches: " + x);
             attempt = ++attempts;
             $('.attempts .value').html(attempt);
@@ -283,7 +289,8 @@ function card_clicked(card_container_element) {
    }
     if (match_counter == total_possible_matches) {
         game_over.play();
-        alert("Board cleared. Congratulations!!");
+        display_stats();
+       // alert("Board cleared. Congratulations!!");
 
     }
 }
@@ -364,6 +371,25 @@ function setHalfVolume(){
     var myAudio = document.getElementById("sw_theme");
     myAudio.volume = 0.25;
 }
+//var count=100;
+var counter = setInterval(timer, 1000);
+function timer(counter){
+    count = count-1;
+    if(count<0){
+        $('#timer').html('Ready to play a game?')
+    }else if(count ==0){
+        clearInterval(counter);
+        $('#timer').html("Time Expired");
+        $('.col-sm-2').remove();
+    }else if(count >=0 && match_counter == total_possible_matches){
+
+        $('#timer').html("Congratuations, you cleared the board!");
+        clearInterval(counter);
+    }else{
+    $('#timer').html(count + 'secs');
+        console.log(count);
+    }
+    }
 //=====another attempt at difficulty, will come back to this later===========//
 //function difficulty(difficult){
 //    switch (difficult) {
